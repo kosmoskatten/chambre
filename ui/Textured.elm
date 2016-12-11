@@ -25,13 +25,13 @@ type alias Face =
 
 makeFace : ( Vec3, Vec3, Vec3, Vec3 ) -> Face
 makeFace ( p1, p2, p3, p4 ) =
-    [ ( Vertex p1 <| vec3 1 0 0
+    [ ( Vertex p1 <| vec3 0 1 0
       , Vertex p2 <| vec3 1 1 0
       , Vertex p3 <| vec3 0 0 0
       )
     , ( Vertex p3 <| vec3 0 0 0
       , Vertex p2 <| vec3 1 1 0
-      , Vertex p4 <| vec3 0 1 0
+      , Vertex p4 <| vec3 1 0 0
       )
     ]
 

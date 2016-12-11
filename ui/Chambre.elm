@@ -35,7 +35,14 @@ view : Mat4 -> Chambre -> List Renderable
 view perspective chambre =
     case chambre.floorTile of
         Just texture ->
-            [ WebGL.render T.vertexShader T.fragmentShader chambre.floor { perspective = perspective, modelView = modelView chambre, texture = texture }
+            [ WebGL.render
+                T.vertexShader
+                T.fragmentShader
+                chambre.floor
+                { perspective = perspective
+                , modelView = modelView chambre
+                , texture = texture
+                }
             ]
 
         Nothing ->
