@@ -17,7 +17,7 @@ type alias Model =
 
 
 type Msg
-    = TextureLoaded WebGL.Texture
+    = TextureLoaded (List WebGL.Texture)
     | TextureFailed WebGL.Error
 
 
@@ -28,15 +28,21 @@ init =
       , chambre = Chambre.make (vec3 0 -5 -20) (vec3 1 1 1)
       , errMsg = ""
       }
-    , tryLoadTexture "textures/floor-tile.jpg"
+    , tryLoadTextures
+        [ "textures/floor-tile.jpg"
+        , "textures/allseeing-eye.png"
+        ]
     )
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        TextureLoaded texture ->
-            ( { model | chambre = Chambre.setFloorTile texture model.chambre }, Cmd.none )
+        TextureLoaded [ floorTile, _ ] ->
+            ( { model | chambre = Chambre.setFloorTile floorTile model.chambre }, Cmd.none )
+
+        TextureLoaded _ ->
+            ( { model | errMsg = "Unexpected number of textures" }, Cmd.none )
 
         TextureFailed _ ->
             ( { model | errMsg = "TextureFailed" }, Cmd.none )
@@ -61,8 +67,8 @@ subscriptions model =
     Sub.none
 
 
-tryLoadTexture : String -> Cmd Msg
-tryLoadTexture url =
+tryLoadTextures : List String -> Cmd Msg
+tryLoadTextures urls =
     Task.attempt
         (\result ->
             case result of
@@ -73,7 +79,7 @@ tryLoadTexture url =
                     TextureFailed err
         )
     <|
-        WebGL.loadTexture url
+        Task.sequence (List.map WebGL.loadTexture urls)
 
 
 sceneWidth : Int

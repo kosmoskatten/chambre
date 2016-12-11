@@ -11651,39 +11651,359 @@ var _kosmoskatten$chambre$Chambre$makeFloor = _elm_community$webgl$WebGL$Triangl
 			ctor: '::',
 			_0: {
 				ctor: '_Tuple4',
-				_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, -2),
-				_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, -2),
-				_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, 0),
-				_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 0)
+				_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -6, 0, -6),
+				_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, -6),
+				_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -6, 0, -4),
+				_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, -4)
 			},
 			_1: {
 				ctor: '::',
 				_0: {
 					ctor: '_Tuple4',
-					_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, -2),
-					_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, -2),
-					_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 0),
-					_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, 0)
+					_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, -6),
+					_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, -6),
+					_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, -4),
+					_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, -4)
 				},
 				_1: {
 					ctor: '::',
 					_0: {
 						ctor: '_Tuple4',
-						_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, 0),
-						_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 0),
-						_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, 2),
-						_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 2)
+						_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, -6),
+						_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, -6),
+						_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, -4),
+						_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, -4)
 					},
 					_1: {
 						ctor: '::',
 						_0: {
 							ctor: '_Tuple4',
-							_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 0),
-							_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, 0),
-							_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 2),
-							_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, 2)
+							_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, -6),
+							_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, -6),
+							_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, -4),
+							_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, -4)
 						},
-						_1: {ctor: '[]'}
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple4',
+								_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, -6),
+								_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, -6),
+								_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, -4),
+								_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, -4)
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple4',
+									_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, -6),
+									_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 6, 0, -6),
+									_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, -4),
+									_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 6, 0, -4)
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple4',
+										_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -6, 0, -4),
+										_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, -4),
+										_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -6, 0, -2),
+										_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, -2)
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple4',
+											_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, -4),
+											_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, -4),
+											_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, -2),
+											_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, -2)
+										},
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple4',
+												_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, -4),
+												_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, -4),
+												_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, -2),
+												_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, -2)
+											},
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple4',
+													_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, -4),
+													_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, -4),
+													_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, -2),
+													_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, -2)
+												},
+												_1: {
+													ctor: '::',
+													_0: {
+														ctor: '_Tuple4',
+														_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, -4),
+														_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, -4),
+														_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, -2),
+														_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, -2)
+													},
+													_1: {
+														ctor: '::',
+														_0: {
+															ctor: '_Tuple4',
+															_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, -4),
+															_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 6, 0, -4),
+															_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, -2),
+															_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 6, 0, -2)
+														},
+														_1: {
+															ctor: '::',
+															_0: {
+																ctor: '_Tuple4',
+																_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -6, 0, -2),
+																_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, -2),
+																_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -6, 0, 0),
+																_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, 0)
+															},
+															_1: {
+																ctor: '::',
+																_0: {
+																	ctor: '_Tuple4',
+																	_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, -2),
+																	_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, -2),
+																	_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, 0),
+																	_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, 0)
+																},
+																_1: {
+																	ctor: '::',
+																	_0: {
+																		ctor: '_Tuple4',
+																		_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, -2),
+																		_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, -2),
+																		_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, 0),
+																		_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 0)
+																	},
+																	_1: {
+																		ctor: '::',
+																		_0: {
+																			ctor: '_Tuple4',
+																			_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, -2),
+																			_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, -2),
+																			_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 0),
+																			_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, 0)
+																		},
+																		_1: {
+																			ctor: '::',
+																			_0: {
+																				ctor: '_Tuple4',
+																				_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, -2),
+																				_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, -2),
+																				_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, 0),
+																				_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, 0)
+																			},
+																			_1: {
+																				ctor: '::',
+																				_0: {
+																					ctor: '_Tuple4',
+																					_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, -2),
+																					_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 6, 0, -2),
+																					_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, 0),
+																					_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 6, 0, 0)
+																				},
+																				_1: {
+																					ctor: '::',
+																					_0: {
+																						ctor: '_Tuple4',
+																						_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -6, 0, 0),
+																						_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, 0),
+																						_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -6, 0, 2),
+																						_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, 2)
+																					},
+																					_1: {
+																						ctor: '::',
+																						_0: {
+																							ctor: '_Tuple4',
+																							_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, 0),
+																							_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, 0),
+																							_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, 2),
+																							_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, 2)
+																						},
+																						_1: {
+																							ctor: '::',
+																							_0: {
+																								ctor: '_Tuple4',
+																								_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, 0),
+																								_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 0),
+																								_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, 2),
+																								_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 2)
+																							},
+																							_1: {
+																								ctor: '::',
+																								_0: {
+																									ctor: '_Tuple4',
+																									_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 0),
+																									_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, 0),
+																									_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 2),
+																									_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, 2)
+																								},
+																								_1: {
+																									ctor: '::',
+																									_0: {
+																										ctor: '_Tuple4',
+																										_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, 0),
+																										_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, 0),
+																										_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, 2),
+																										_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, 2)
+																									},
+																									_1: {
+																										ctor: '::',
+																										_0: {
+																											ctor: '_Tuple4',
+																											_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, 0),
+																											_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 6, 0, 0),
+																											_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, 2),
+																											_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 6, 0, 2)
+																										},
+																										_1: {
+																											ctor: '::',
+																											_0: {
+																												ctor: '_Tuple4',
+																												_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -6, 0, 2),
+																												_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, 2),
+																												_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -6, 0, 4),
+																												_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, 4)
+																											},
+																											_1: {
+																												ctor: '::',
+																												_0: {
+																													ctor: '_Tuple4',
+																													_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, 2),
+																													_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, 2),
+																													_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, 4),
+																													_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, 4)
+																												},
+																												_1: {
+																													ctor: '::',
+																													_0: {
+																														ctor: '_Tuple4',
+																														_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, 2),
+																														_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 2),
+																														_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, 4),
+																														_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 4)
+																													},
+																													_1: {
+																														ctor: '::',
+																														_0: {
+																															ctor: '_Tuple4',
+																															_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 2),
+																															_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, 2),
+																															_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 4),
+																															_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, 4)
+																														},
+																														_1: {
+																															ctor: '::',
+																															_0: {
+																																ctor: '_Tuple4',
+																																_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, 2),
+																																_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, 2),
+																																_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, 4),
+																																_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, 4)
+																															},
+																															_1: {
+																																ctor: '::',
+																																_0: {
+																																	ctor: '_Tuple4',
+																																	_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, 2),
+																																	_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 6, 0, 2),
+																																	_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, 4),
+																																	_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 6, 0, 4)
+																																},
+																																_1: {
+																																	ctor: '::',
+																																	_0: {
+																																		ctor: '_Tuple4',
+																																		_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -6, 0, 4),
+																																		_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, 4),
+																																		_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -6, 0, 6),
+																																		_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, 6)
+																																	},
+																																	_1: {
+																																		ctor: '::',
+																																		_0: {
+																																			ctor: '_Tuple4',
+																																			_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, 4),
+																																			_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, 4),
+																																			_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -4, 0, 6),
+																																			_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, 6)
+																																		},
+																																		_1: {
+																																			ctor: '::',
+																																			_0: {
+																																				ctor: '_Tuple4',
+																																				_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, 4),
+																																				_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 4),
+																																				_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, -2, 0, 6),
+																																				_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 6)
+																																			},
+																																			_1: {
+																																				ctor: '::',
+																																				_0: {
+																																					ctor: '_Tuple4',
+																																					_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 4),
+																																					_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, 4),
+																																					_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, 0, 6),
+																																					_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, 6)
+																																				},
+																																				_1: {
+																																					ctor: '::',
+																																					_0: {
+																																						ctor: '_Tuple4',
+																																						_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, 4),
+																																						_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, 4),
+																																						_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 2, 0, 6),
+																																						_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, 6)
+																																					},
+																																					_1: {
+																																						ctor: '::',
+																																						_0: {
+																																							ctor: '_Tuple4',
+																																							_0: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, 4),
+																																							_1: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 6, 0, 4),
+																																							_2: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 4, 0, 6),
+																																							_3: A3(_elm_community$linear_algebra$Math_Vector3$vec3, 6, 0, 6)
+																																						},
+																																						_1: {ctor: '[]'}
+																																					}
+																																				}
+																																			}
+																																		}
+																																	}
+																																}
+																															}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
 					}
 				}
 			}
@@ -11771,15 +12091,25 @@ var _kosmoskatten$chambre$Scene$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
 		if (_p0.ctor === 'TextureLoaded') {
-			return {
-				ctor: '_Tuple2',
-				_0: _elm_lang$core$Native_Utils.update(
-					model,
-					{
-						chambre: A2(_kosmoskatten$chambre$Chambre$setFloorTile, _p0._0, model.chambre)
-					}),
-				_1: _elm_lang$core$Platform_Cmd$none
-			};
+			if ((_p0._0.ctor === '::') && (_p0._0._1.ctor === '[]')) {
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							chambre: A2(_kosmoskatten$chambre$Chambre$setFloorTile, _p0._0._0, model.chambre)
+						}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			} else {
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{errMsg: 'Unexpected number of textures'}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			}
 		} else {
 			return {
 				ctor: '_Tuple2',
@@ -11800,7 +12130,7 @@ var _kosmoskatten$chambre$Scene$TextureFailed = function (a) {
 var _kosmoskatten$chambre$Scene$TextureLoaded = function (a) {
 	return {ctor: 'TextureLoaded', _0: a};
 };
-var _kosmoskatten$chambre$Scene$tryLoadTexture = function (url) {
+var _kosmoskatten$chambre$Scene$tryLoadTextures = function (urls) {
 	return A2(
 		_elm_lang$core$Task$attempt,
 		function (result) {
@@ -11811,7 +12141,8 @@ var _kosmoskatten$chambre$Scene$tryLoadTexture = function (url) {
 				return _kosmoskatten$chambre$Scene$TextureFailed(_p1._0);
 			}
 		},
-		_elm_community$webgl$WebGL$loadTexture(url));
+		_elm_lang$core$Task$sequence(
+			A2(_elm_lang$core$List$map, _elm_community$webgl$WebGL$loadTexture, urls)));
 };
 var _kosmoskatten$chambre$Scene$init = {
 	ctor: '_Tuple2',
@@ -11824,11 +12155,16 @@ var _kosmoskatten$chambre$Scene$init = {
 			100),
 		chambre: A2(
 			_kosmoskatten$chambre$Chambre$make,
-			A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, -2, -10),
+			A3(_elm_community$linear_algebra$Math_Vector3$vec3, 0, -5, -20),
 			A3(_elm_community$linear_algebra$Math_Vector3$vec3, 1, 1, 1)),
 		errMsg: ''
 	},
-	_1: _kosmoskatten$chambre$Scene$tryLoadTexture('textures/floor-tile.jpg')
+	_1: _kosmoskatten$chambre$Scene$tryLoadTextures(
+		{
+			ctor: '::',
+			_0: 'textures/floor-tile.jpg',
+			_1: {ctor: '[]'}
+		})
 };
 
 var _kosmoskatten$chambre$Main$main = _elm_lang$html$Html$program(
