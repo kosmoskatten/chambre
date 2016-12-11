@@ -60,15 +60,49 @@ makeFloor : Drawable T.Vertex
 makeFloor =
     Triangle <|
         concatMap T.makeFace
-            [ ( vec3 -2 0 -2, vec3 0 0 -2, vec3 -2 0 0, vec3 0 0 0 )
+            [ -- Row 1
+              ( vec3 -6 0 -6, vec3 -4 0 -6, vec3 -6 0 -4, vec3 -4 0 -4 )
+            , ( vec3 -4 0 -6, vec3 -2 0 -6, vec3 -4 0 -4, vec3 -2 0 -4 )
+            , ( vec3 -2 0 -6, vec3 0 0 -6, vec3 -2 0 -4, vec3 0 0 -4 )
+            , ( vec3 0 0 -6, vec3 2 0 -6, vec3 0 0 -4, vec3 2 0 -4 )
+            , ( vec3 2 0 -6, vec3 4 0 -6, vec3 2 0 -4, vec3 4 0 -4 )
+            , ( vec3 4 0 -6, vec3 6 0 -6, vec3 4 0 -4, vec3 6 0 -4 )
+              -- Row 2
+            , ( vec3 -6 0 -4, vec3 -4 0 -4, vec3 -6 0 -2, vec3 -4 0 -2 )
+            , ( vec3 -4 0 -4, vec3 -2 0 -4, vec3 -4 0 -2, vec3 -2 0 -2 )
+            , ( vec3 -2 0 -4, vec3 0 0 -4, vec3 -2 0 -2, vec3 0 0 -2 )
+            , ( vec3 0 0 -4, vec3 2 0 -4, vec3 0 0 -2, vec3 2 0 -2 )
+            , ( vec3 2 0 -4, vec3 4 0 -4, vec3 2 0 -2, vec3 4 0 -2 )
+            , ( vec3 4 0 -4, vec3 6 0 -4, vec3 4 0 -2, vec3 6 0 -2 )
+              -- Row 3
+            , ( vec3 -6 0 -2, vec3 -4 0 -2, vec3 -6 0 0, vec3 -4 0 0 )
+            , ( vec3 -4 0 -2, vec3 -2 0 -2, vec3 -4 0 0, vec3 -2 0 0 )
+            , ( vec3 -2 0 -2, vec3 0 0 -2, vec3 -2 0 0, vec3 0 0 0 )
             , ( vec3 0 0 -2, vec3 2 0 -2, vec3 0 0 0, vec3 2 0 0 )
+            , ( vec3 2 0 -2, vec3 4 0 -2, vec3 2 0 0, vec3 4 0 0 )
+            , ( vec3 4 0 -2, vec3 6 0 -2, vec3 4 0 0, vec3 6 0 0 )
+              -- Row 4
+            , ( vec3 -6 0 0, vec3 -4 0 0, vec3 -6 0 2, vec3 -4 0 2 )
+            , ( vec3 -4 0 0, vec3 -2 0 0, vec3 -4 0 2, vec3 -2 0 2 )
             , ( vec3 -2 0 0, vec3 0 0 0, vec3 -2 0 2, vec3 0 0 2 )
             , ( vec3 0 0 0, vec3 2 0 0, vec3 0 0 2, vec3 2 0 2 )
+            , ( vec3 2 0 0, vec3 4 0 0, vec3 2 0 2, vec3 4 0 2 )
+            , ( vec3 4 0 0, vec3 6 0 0, vec3 4 0 2, vec3 6 0 2 )
+              -- Row 5
+            , ( vec3 -6 0 2, vec3 -4 0 2, vec3 -6 0 4, vec3 -4 0 4 )
+            , ( vec3 -4 0 2, vec3 -2 0 2, vec3 -4 0 4, vec3 -2 0 4 )
+            , ( vec3 -2 0 2, vec3 0 0 2, vec3 -2 0 4, vec3 0 0 4 )
+            , ( vec3 0 0 2, vec3 2 0 2, vec3 0 0 4, vec3 2 0 4 )
+            , ( vec3 2 0 2, vec3 4 0 2, vec3 2 0 4, vec3 4 0 4 )
+            , ( vec3 4 0 2, vec3 6 0 2, vec3 4 0 4, vec3 6 0 4 )
+              -- Row 6
+            , ( vec3 -6 0 4, vec3 -4 0 4, vec3 -6 0 6, vec3 -4 0 6 )
+            , ( vec3 -4 0 4, vec3 -2 0 4, vec3 -4 0 6, vec3 -2 0 6 )
+            , ( vec3 -2 0 4, vec3 0 0 4, vec3 -2 0 6, vec3 0 0 6 )
+            , ( vec3 0 0 4, vec3 2 0 4, vec3 0 0 6, vec3 2 0 6 )
+            , ( vec3 2 0 4, vec3 4 0 4, vec3 2 0 6, vec3 4 0 6 )
+            , ( vec3 4 0 4, vec3 6 0 4, vec3 4 0 6, vec3 6 0 6 )
             ]
-
-
-
---Triangle <| C.makeFace ( ( vec3 -1 1 -1, vec3 1 1 -1, vec3 -1 -1 -1, vec3 1 -1 -1 ), vec4 1 0 0 1 )
 
 
 modelView : Chambre -> Mat4

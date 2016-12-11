@@ -25,7 +25,7 @@ init : ( Model, Cmd Msg )
 init =
     ( { perspective =
             makePerspective 45 (toFloat sceneWidth / toFloat sceneHeight) 0.1 100
-      , chambre = Chambre.make (vec3 0 -2 -10) (vec3 1 1 1)
+      , chambre = Chambre.make (vec3 0 -5 -20) (vec3 1 1 1)
       , errMsg = ""
       }
     , tryLoadTexture "textures/floor-tile.jpg"
