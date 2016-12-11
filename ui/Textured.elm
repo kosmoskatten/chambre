@@ -3,6 +3,7 @@ module Textured
         ( Vertex
         , Face
         , makeFace
+        , makeTriangleFace
         , vertexShader
         , fragmentShader
         )
@@ -32,6 +33,15 @@ makeFace ( p1, p2, p3, p4 ) =
     , ( Vertex p3 <| vec3 0 0 0
       , Vertex p2 <| vec3 1 1 0
       , Vertex p4 <| vec3 1 0 0
+      )
+    ]
+
+
+makeTriangleFace : ( Vec3, Vec3, Vec3 ) -> Face
+makeTriangleFace ( p1, p2, p3 ) =
+    [ ( Vertex p1 <| vec3 0.5 1 0
+      , Vertex p2 <| vec3 1 0 0
+      , Vertex p3 <| vec3 0 0 0
       )
     ]
 

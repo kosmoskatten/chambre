@@ -30,8 +30,8 @@ init : ( Model, Cmd Msg )
 init =
     ( { perspective =
             makePerspective 45 (toFloat sceneWidth / toFloat sceneHeight) 0.1 100
-      , chambre = Chambre.make (vec3 0 -5 -60) (vec3 1 1 1)
-      , pyramid = Pyramid.make (vec3 0 0 -6) (vec3 1 1 1)
+      , chambre = Chambre.make (vec3 0 -5 -25) (vec3 1 1 1)
+      , pyramid = Pyramid.make (vec3 0 -3 -25) (vec3 1 1 1)
       , errMsg = ""
       }
     , tryLoadTextures

@@ -1,5 +1,6 @@
 module Pyramid exposing (Pyramid, make, incYaw, setPyramidTile, view)
 
+import List exposing (concatMap)
 import Math.Vector3 exposing (Vec3, vec3)
 import Math.Matrix4
     exposing
@@ -62,13 +63,17 @@ view perspective pyramid =
 
 makePyramid : Drawable T.Vertex
 makePyramid =
-    --    Triangle <| T.makeFace ( vec3 -1 1 0, vec3 1 1 0, vec3 -1 -1 0, vec3 1 -1 0 )
-    Triangle
-        [ ( T.Vertex (vec3 0 1 0) (vec3 0.5 1 0)
-          , T.Vertex (vec3 1 -1 1) (vec3 1 0 0)
-          , T.Vertex (vec3 -1 -1 1) (vec3 0 0 0)
-          )
-        ]
+    Triangle <|
+        concatMap T.makeTriangleFace
+            [ -- Front face
+              ( vec3 0 1 0, vec3 1 -1 1, vec3 -1 -1 1 )
+              -- Left face
+            , ( vec3 0 1 0, vec3 1 -1 -1, vec3 1 -1 1 )
+              -- Back face
+            , ( vec3 0 1 0, vec3 -1 -1 -1, vec3 1 -1 -1 )
+              -- Right face
+            , ( vec3 0 1 0, vec3 -1 -1 1, vec3 -1 -1 -1 )
+            ]
 
 
 modelView : Pyramid -> Mat4
