@@ -49,6 +49,8 @@ init =
     , tryLoadTextures
         [ "textures/floor-tile.jpg"
         , "textures/allseeing-eye.png"
+        , "textures/stone-wall-tile.jpg"
+        , "textures/door-tile.jpg"
         ]
     )
 
@@ -67,9 +69,14 @@ update msg model =
         SwitchTo pos ->
             ( { model | cameraPos = pos }, Cmd.none )
 
-        TextureLoaded [ floorTile, pyramidTile ] ->
+        TextureLoaded [ floorTile, pyramidTile, stoneWallTile, doorTile ] ->
             ( { model
-                | chambre = Chambre.setFloorTile floorTile model.chambre
+                | chambre =
+                    Chambre.setChambreTiles
+                        floorTile
+                        stoneWallTile
+                        doorTile
+                        model.chambre
                 , pyramid = Pyramid.setPyramidTile pyramidTile model.pyramid
               }
             , Cmd.none
@@ -172,7 +179,7 @@ getCameraPos model =
             ( vec3 0 20 -21, vec3 0 3 -50 )
 
         Three ->
-            ( vec3 0 90 -50.1, vec3 0 3 -50 )
+            ( vec3 0 90 -49, vec3 0 3 -50 )
 
 
 getCameraName : Model -> String
