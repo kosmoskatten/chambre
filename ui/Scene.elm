@@ -172,7 +172,7 @@ getCameraPos model =
             ( vec3 0 20 -84, vec3 0 3 -50 )
 
         Three ->
-            ( vec3 0 50 -51, vec3 0 3 -50 )
+            ( vec3 0 90 -51, vec3 0 3 -50 )
 
 
 getCameraName : Model -> String
