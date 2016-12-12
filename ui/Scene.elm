@@ -2,9 +2,10 @@ module Scene exposing (Model, Msg, init, update, view, subscriptions)
 
 import AnimationFrame exposing (diffs)
 import Chambre exposing (Chambre)
+import Char exposing (fromCode)
 import Html exposing (Html, div, p, fieldset, input, label, text, table, tr, td)
 import Html.Attributes as Attr
-import Html.Events as Evts
+import Keyboard exposing (KeyCode, downs)
 import Math.Vector3 exposing (Vec3, vec3)
 import Math.Matrix4 exposing (Mat4, mul, makePerspective, makeLookAt)
 import Pyramid exposing (Pyramid)
@@ -27,13 +28,13 @@ type Msg
     | SwitchTo CameraPos
     | TextureLoaded (List WebGL.Texture)
     | TextureFailed WebGL.Error
+    | NoOp
 
 
 type CameraPos
-    = DownInCorner
-    | UpInCorner
-    | DownAtSide
-    | UpAtSide
+    = One
+    | Two
+    | Three
 
 
 init : ( Model, Cmd Msg )
@@ -42,7 +43,7 @@ init =
             makePerspective 45 (toFloat sceneWidth / toFloat sceneHeight) 0.1 100
       , chambre = Chambre.make (vec3 0 0 -50) (vec3 5 5 5)
       , pyramid = Pyramid.make (vec3 0 6 -50) (vec3 5 5 5)
-      , cameraPos = DownInCorner
+      , cameraPos = One
       , errMsg = ""
       }
     , tryLoadTextures
@@ -80,6 +81,9 @@ update msg model =
         TextureFailed _ ->
             ( { model | errMsg = "TextureFailed" }, Cmd.none )
 
+        NoOp ->
+            ( model, Cmd.none )
+
 
 view : Model -> Html Msg
 view model =
@@ -103,29 +107,44 @@ viewScene model =
 
 viewCameraControl : Model -> Html Msg
 viewCameraControl model =
-    div [ Attr.style [ ( "width", "800px" ), ( "border", "solid" ) ] ]
-        [ p [] [ text "Camera Positions" ]
-        , table []
-            [ tr [] [ td [] [ radio "Down in corner" <| SwitchTo DownInCorner ] ]
-            , tr [] [ td [] [ radio "Up in corner" <| SwitchTo UpInCorner ] ]
-            , tr [] [ td [] [ radio "Down at side" <| SwitchTo DownAtSide ] ]
-            , tr [] [ td [] [ radio "Up at side" <| SwitchTo UpAtSide ] ]
+    div
+        [ Attr.style
+            [ ( "border", "solid" )
+            , ( "width", toString sceneWidth ++ "px" )
             ]
         ]
-
-
-radio : String -> Msg -> Html Msg
-radio value msg =
-    label [ Attr.style [ ( "padding", "20px" ) ] ]
-        [ input [ Attr.type_ "radio", Attr.name "camera", Evts.onClick msg ]
-            []
-        , text value
+        [ p []
+            [ text <|
+                "Scroll through cameras through (1 - 3). Active camera: "
+                    ++ getCameraName model
+            ]
         ]
 
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
-    diffs Animate
+    Sub.batch [ diffs Animate, Sub.map handleKey <| downs identity ]
+
+
+
+-- Preferring to not push keypresses directly upto the update function. Instead
+-- translate to more semantic actions.
+
+
+handleKey : KeyCode -> Msg
+handleKey code =
+    case fromCode code of
+        '1' ->
+            SwitchTo One
+
+        '2' ->
+            SwitchTo Two
+
+        '3' ->
+            SwitchTo Three
+
+        _ ->
+            NoOp
 
 
 tryLoadTextures : List String -> Cmd Msg
@@ -146,17 +165,27 @@ tryLoadTextures urls =
 getCameraPos : Model -> ( Vec3, Vec3 )
 getCameraPos model =
     case model.cameraPos of
-        DownInCorner ->
-            ( vec3 -34 2 -79, vec3 0 10 -50 )
-
-        UpInCorner ->
+        One ->
             ( vec3 -34 20 -79, vec3 0 3 -50 )
 
-        DownAtSide ->
-            ( vec3 0 2 -84, vec3 0 10 -50 )
-
-        UpAtSide ->
+        Two ->
             ( vec3 0 20 -84, vec3 0 3 -50 )
+
+        Three ->
+            ( vec3 0 50 -51, vec3 0 3 -50 )
+
+
+getCameraName : Model -> String
+getCameraName model =
+    case model.cameraPos of
+        One ->
+            "One"
+
+        Two ->
+            "Two"
+
+        Three ->
+            "Three"
 
 
 makeViewerPerspective : Model -> Mat4
