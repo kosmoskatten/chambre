@@ -173,13 +173,13 @@ getCameraPos : Model -> ( Vec3, Vec3 )
 getCameraPos model =
     case model.cameraPos of
         One ->
-            ( vec3 -34 20 -21, vec3 0 3 -50 )
+            ( vec3 -16 15 -16, vec3 0 3 -50 )
 
         Two ->
-            ( vec3 0 20 -21, vec3 0 3 -50 )
+            ( vec3 0 15 -16, vec3 0 3 -50 )
 
         Three ->
-            ( vec3 0 90 -49, vec3 0 3 -50 )
+            ( vec3 0 95 -49, vec3 0 3 -50 )
 
 
 getCameraName : Model -> String

@@ -92,47 +92,61 @@ makeFloor =
     Triangle <|
         concatMap T.makeFace
             [ -- Row 1
-              ( vec3 -6 0 -6, vec3 -4 0 -6, vec3 -6 0 -4, vec3 -4 0 -4 )
-            , ( vec3 -4 0 -6, vec3 -2 0 -6, vec3 -4 0 -4, vec3 -2 0 -4 )
-            , ( vec3 -2 0 -6, vec3 0 0 -6, vec3 -2 0 -4, vec3 0 0 -4 )
-            , ( vec3 0 0 -6, vec3 2 0 -6, vec3 0 0 -4, vec3 2 0 -4 )
-            , ( vec3 2 0 -6, vec3 4 0 -6, vec3 2 0 -4, vec3 4 0 -4 )
-            , ( vec3 4 0 -6, vec3 6 0 -6, vec3 4 0 -4, vec3 6 0 -4 )
+              ( vec3 -7 0 -7, vec3 -5 0 -7, vec3 -7 0 -5, vec3 -5 0 -5 )
+            , ( vec3 -5 0 -7, vec3 -3 0 -7, vec3 -5 0 -5, vec3 -3 0 -5 )
+            , ( vec3 -3 0 -7, vec3 -1 0 -7, vec3 -3 0 -5, vec3 -1 0 -5 )
+            , ( vec3 -1 0 -7, vec3 1 0 -7, vec3 -1 0 -5, vec3 1 0 -5 )
+            , ( vec3 1 0 -7, vec3 3 0 -7, vec3 1 0 -5, vec3 3 0 -5 )
+            , ( vec3 3 0 -7, vec3 5 0 -7, vec3 3 0 -5, vec3 5 0 -5 )
+            , ( vec3 5 0 -7, vec3 7 0 -7, vec3 5 0 -5, vec3 7 0 -5 )
               -- Row 2
-            , ( vec3 -6 0 -4, vec3 -4 0 -4, vec3 -6 0 -2, vec3 -4 0 -2 )
-            , ( vec3 -4 0 -4, vec3 -2 0 -4, vec3 -4 0 -2, vec3 -2 0 -2 )
-            , ( vec3 -2 0 -4, vec3 0 0 -4, vec3 -2 0 -2, vec3 0 0 -2 )
-            , ( vec3 0 0 -4, vec3 2 0 -4, vec3 0 0 -2, vec3 2 0 -2 )
-            , ( vec3 2 0 -4, vec3 4 0 -4, vec3 2 0 -2, vec3 4 0 -2 )
-            , ( vec3 4 0 -4, vec3 6 0 -4, vec3 4 0 -2, vec3 6 0 -2 )
+            , ( vec3 -7 0 -5, vec3 -5 0 -5, vec3 -7 0 -3, vec3 -5 0 -3 )
+            , ( vec3 -5 0 -5, vec3 -3 0 -5, vec3 -5 0 -3, vec3 -3 0 -3 )
+            , ( vec3 -3 0 -5, vec3 -1 0 -5, vec3 -3 0 -3, vec3 -1 0 -3 )
+            , ( vec3 -1 0 -5, vec3 1 0 -5, vec3 -1 0 -3, vec3 1 0 -3 )
+            , ( vec3 1 0 -5, vec3 3 0 -5, vec3 1 0 -3, vec3 3 0 -3 )
+            , ( vec3 3 0 -5, vec3 5 0 -5, vec3 3 0 -3, vec3 5 0 -3 )
+            , ( vec3 5 0 -5, vec3 7 0 -5, vec3 5 0 -3, vec3 7 0 -3 )
               -- Row 3
-            , ( vec3 -6 0 -2, vec3 -4 0 -2, vec3 -6 0 0, vec3 -4 0 0 )
-            , ( vec3 -4 0 -2, vec3 -2 0 -2, vec3 -4 0 0, vec3 -2 0 0 )
-            , ( vec3 -2 0 -2, vec3 0 0 -2, vec3 -2 0 0, vec3 0 0 0 )
-            , ( vec3 0 0 -2, vec3 2 0 -2, vec3 0 0 0, vec3 2 0 0 )
-            , ( vec3 2 0 -2, vec3 4 0 -2, vec3 2 0 0, vec3 4 0 0 )
-            , ( vec3 4 0 -2, vec3 6 0 -2, vec3 4 0 0, vec3 6 0 0 )
+            , ( vec3 -7 0 -3, vec3 -5 0 -3, vec3 -7 0 -1, vec3 -5 0 -1 )
+            , ( vec3 -5 0 -3, vec3 -3 0 -3, vec3 -5 0 -1, vec3 -3 0 -1 )
+            , ( vec3 -3 0 -3, vec3 -1 0 -3, vec3 -3 0 -1, vec3 -1 0 -1 )
+            , ( vec3 -1 0 -3, vec3 1 0 -3, vec3 -1 0 -1, vec3 1 0 -1 )
+            , ( vec3 1 0 -3, vec3 3 0 -3, vec3 1 0 -1, vec3 3 0 -1 )
+            , ( vec3 3 0 -3, vec3 5 0 -3, vec3 3 0 -1, vec3 5 0 -1 )
+            , ( vec3 5 0 -3, vec3 7 0 -3, vec3 5 0 -1, vec3 7 0 -1 )
               -- Row 4
-            , ( vec3 -6 0 0, vec3 -4 0 0, vec3 -6 0 2, vec3 -4 0 2 )
-            , ( vec3 -4 0 0, vec3 -2 0 0, vec3 -4 0 2, vec3 -2 0 2 )
-            , ( vec3 -2 0 0, vec3 0 0 0, vec3 -2 0 2, vec3 0 0 2 )
-            , ( vec3 0 0 0, vec3 2 0 0, vec3 0 0 2, vec3 2 0 2 )
-            , ( vec3 2 0 0, vec3 4 0 0, vec3 2 0 2, vec3 4 0 2 )
-            , ( vec3 4 0 0, vec3 6 0 0, vec3 4 0 2, vec3 6 0 2 )
+            , ( vec3 -7 0 -1, vec3 -5 0 -1, vec3 -7 0 1, vec3 -5 0 1 )
+            , ( vec3 -5 0 -1, vec3 -3 0 -1, vec3 -5 0 1, vec3 -3 0 1 )
+            , ( vec3 -3 0 -1, vec3 -1 0 -1, vec3 -3 0 1, vec3 -1 0 1 )
+            , ( vec3 -1 0 -1, vec3 1 0 -1, vec3 -1 0 1, vec3 1 0 1 )
+            , ( vec3 1 0 -1, vec3 3 0 -1, vec3 1 0 1, vec3 3 0 1 )
+            , ( vec3 3 0 -1, vec3 5 0 -1, vec3 3 0 1, vec3 5 0 1 )
+            , ( vec3 5 0 -1, vec3 7 0 -1, vec3 5 0 1, vec3 7 0 1 )
               -- Row 5
-            , ( vec3 -6 0 2, vec3 -4 0 2, vec3 -6 0 4, vec3 -4 0 4 )
-            , ( vec3 -4 0 2, vec3 -2 0 2, vec3 -4 0 4, vec3 -2 0 4 )
-            , ( vec3 -2 0 2, vec3 0 0 2, vec3 -2 0 4, vec3 0 0 4 )
-            , ( vec3 0 0 2, vec3 2 0 2, vec3 0 0 4, vec3 2 0 4 )
-            , ( vec3 2 0 2, vec3 4 0 2, vec3 2 0 4, vec3 4 0 4 )
-            , ( vec3 4 0 2, vec3 6 0 2, vec3 4 0 4, vec3 6 0 4 )
+            , ( vec3 -7 0 1, vec3 -5 0 1, vec3 -7 0 3, vec3 -5 0 3 )
+            , ( vec3 -5 0 1, vec3 -3 0 1, vec3 -5 0 3, vec3 -3 0 3 )
+            , ( vec3 -3 0 1, vec3 -1 0 1, vec3 -3 0 3, vec3 -1 0 3 )
+            , ( vec3 -1 0 1, vec3 1 0 1, vec3 -1 0 3, vec3 1 0 3 )
+            , ( vec3 1 0 1, vec3 3 0 1, vec3 1 0 3, vec3 3 0 3 )
+            , ( vec3 3 0 1, vec3 5 0 1, vec3 3 0 3, vec3 5 0 3 )
+            , ( vec3 5 0 1, vec3 7 0 1, vec3 5 0 3, vec3 7 0 3 )
               -- Row 6
-            , ( vec3 -6 0 4, vec3 -4 0 4, vec3 -6 0 6, vec3 -4 0 6 )
-            , ( vec3 -4 0 4, vec3 -2 0 4, vec3 -4 0 6, vec3 -2 0 6 )
-            , ( vec3 -2 0 4, vec3 0 0 4, vec3 -2 0 6, vec3 0 0 6 )
-            , ( vec3 0 0 4, vec3 2 0 4, vec3 0 0 6, vec3 2 0 6 )
-            , ( vec3 2 0 4, vec3 4 0 4, vec3 2 0 6, vec3 4 0 6 )
-            , ( vec3 4 0 4, vec3 6 0 4, vec3 4 0 6, vec3 6 0 6 )
+            , ( vec3 -7 0 3, vec3 -5 0 3, vec3 -7 0 5, vec3 -5 0 5 )
+            , ( vec3 -5 0 3, vec3 -3 0 3, vec3 -5 0 5, vec3 -3 0 5 )
+            , ( vec3 -3 0 3, vec3 -1 0 3, vec3 -3 0 5, vec3 -1 0 5 )
+            , ( vec3 -1 0 3, vec3 1 0 3, vec3 -1 0 5, vec3 1 0 5 )
+            , ( vec3 1 0 3, vec3 3 0 3, vec3 1 0 5, vec3 3 0 5 )
+            , ( vec3 3 0 3, vec3 5 0 3, vec3 3 0 5, vec3 5 0 5 )
+            , ( vec3 5 0 3, vec3 7 0 3, vec3 5 0 5, vec3 7 0 5 )
+              -- Row 6
+            , ( vec3 -7 0 5, vec3 -5 0 5, vec3 -7 0 7, vec3 -5 0 7 )
+            , ( vec3 -5 0 5, vec3 -3 0 5, vec3 -5 0 7, vec3 -3 0 7 )
+            , ( vec3 -3 0 5, vec3 -1 0 5, vec3 -3 0 7, vec3 -1 0 7 )
+            , ( vec3 -1 0 5, vec3 1 0 5, vec3 -1 0 7, vec3 1 0 7 )
+            , ( vec3 1 0 5, vec3 3 0 5, vec3 1 0 7, vec3 3 0 7 )
+            , ( vec3 3 0 5, vec3 5 0 5, vec3 3 0 7, vec3 5 0 7 )
+            , ( vec3 5 0 5, vec3 7 0 5, vec3 5 0 7, vec3 7 0 7 )
             ]
 
 
@@ -141,11 +155,12 @@ makeFarWall =
     Triangle <|
         concatMap T.makeFace
             [ -- Bottom row - give room for a door.
-              ( vec3 -6 2 -6, vec3 -4 2 -6, vec3 -6 0 -6, vec3 -4 0 -6 )
-            , ( vec3 -4 2 -6, vec3 -2 2 -6, vec3 -4 0 -6, vec3 -2 0 -6 )
-            , ( vec3 0 2 -6, vec3 2 2 -6, vec3 0 0 -6, vec3 2 0 -6 )
-            , ( vec3 2 2 -6, vec3 4 2 -6, vec3 2 0 -6, vec3 4 0 -6 )
-            , ( vec3 4 2 -6, vec3 6 2 -6, vec3 4 0 -6, vec3 6 0 -6 )
+              ( vec3 -7 2 -7, vec3 -5 2 -7, vec3 -7 0 -7, vec3 -5 0 -7 )
+            , ( vec3 -5 2 -7, vec3 -3 2 -7, vec3 -5 0 -7, vec3 -3 0 -7 )
+            , ( vec3 -3 2 -7, vec3 -1 2 -7, vec3 -3 0 -7, vec3 -1 0 -7 )
+            , ( vec3 1 2 -7, vec3 3 2 -7, vec3 1 0 -7, vec3 3 0 -7 )
+            , ( vec3 3 2 -7, vec3 5 2 -7, vec3 3 0 -7, vec3 5 0 -7 )
+            , ( vec3 5 2 -7, vec3 7 2 -7, vec3 5 0 -7, vec3 7 0 -7 )
             ]
 
 
@@ -153,7 +168,7 @@ makeFarWallDoor : Drawable T.Vertex
 makeFarWallDoor =
     Triangle <|
         concatMap T.makeFace
-            [ ( vec3 -2 2 -6, vec3 0 2 -6, vec3 -2 0 -6, vec3 0 0 -6 )
+            [ ( vec3 -1 2 -7, vec3 1 2 -7, vec3 -1 0 -7, vec3 1 0 -7 )
             ]
 
 
