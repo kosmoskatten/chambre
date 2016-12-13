@@ -179,10 +179,15 @@ makeFloor1Walls =
             , ( vec3 7 2 1, vec3 7 2 3, vec3 7 0 1, vec3 7 0 3 )
             , ( vec3 7 2 5, vec3 7 2 7, vec3 7 0 5, vec3 7 0 7 )
               -- Left wall - three windows.
-            , ( vec3 -7 2 -5, vec3 -7 2 -7, vec3 -7 0 -5, vec3 -7 0 -7 )
-            , ( vec3 -7 2 -1, vec3 -7 2 -3, vec3 -7 0 -1, vec3 -7 0 -3 )
-            , ( vec3 -7 2 3, vec3 -7 2 1, vec3 -7 0 3, vec3 -7 0 1 )
             , ( vec3 -7 2 7, vec3 -7 2 5, vec3 -7 0 7, vec3 -7 0 5 )
+            , ( vec3 -7 2 3, vec3 -7 2 1, vec3 -7 0 3, vec3 -7 0 1 )
+            , ( vec3 -7 2 -1, vec3 -7 2 -3, vec3 -7 0 -1, vec3 -7 0 -3 )
+            , ( vec3 -7 2 -5, vec3 -7 2 -7, vec3 -7 0 -5, vec3 -7 0 -7 )
+              -- Near wall - three windows.
+            , ( vec3 7 2 7, vec3 5 2 7, vec3 7 0 7, vec3 5 0 7 )
+            , ( vec3 3 2 7, vec3 1 2 7, vec3 3 0 7, vec3 1 0 7 )
+            , ( vec3 -1 2 7, vec3 -3 2 7, vec3 -1 0 7, vec3 -3 0 7 )
+            , ( vec3 -5 2 7, vec3 -7 2 7, vec3 -5 0 7, vec3 -7 0 7 )
             ]
 
 
@@ -206,9 +211,13 @@ makeFloor1Windows =
             , ( vec3 7 2 -1, vec3 7 2 1, vec3 7 0 -1, vec3 7 0 1 )
             , ( vec3 7 2 3, vec3 7 2 5, vec3 7 0 3, vec3 7 0 5 )
               -- Right wall - three windows
-            , ( vec3 -7 2 -3, vec3 -7 2 -5, vec3 -7 0 -3, vec3 -7 0 -5 )
-            , ( vec3 -7 2 1, vec3 -7 2 -1, vec3 -7 0 1, vec3 -7 0 -1 )
             , ( vec3 -7 2 5, vec3 -7 2 3, vec3 -7 0 5, vec3 -7 0 3 )
+            , ( vec3 -7 2 1, vec3 -7 2 -1, vec3 -7 0 1, vec3 -7 0 -1 )
+            , ( vec3 -7 2 -3, vec3 -7 2 -5, vec3 -7 0 -3, vec3 -7 0 -5 )
+              -- Near wall - three windows
+            , ( vec3 5 2 7, vec3 3 2 7, vec3 5 0 7, vec3 3 0 7 )
+            , ( vec3 1 2 7, vec3 -1 2 7, vec3 1 0 7, vec3 -1 0 7 )
+            , ( vec3 -3 2 7, vec3 -5 2 7, vec3 -3 0 7, vec3 -5 0 7 )
             ]
 
 
