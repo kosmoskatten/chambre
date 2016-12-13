@@ -51,6 +51,7 @@ init =
         , "textures/allseeing-eye.png"
         , "textures/stone-wall-tile.jpg"
         , "textures/door-tile.jpg"
+        , "textures/window-fl1-tile.jpg"
         ]
     )
 
@@ -69,13 +70,14 @@ update msg model =
         SwitchTo pos ->
             ( { model | cameraPos = pos }, Cmd.none )
 
-        TextureLoaded [ floorTile, pyramidTile, stoneWallTile, doorTile ] ->
+        TextureLoaded [ floorTile, pyramidTile, stoneWallTile, doorTile, windowTile ] ->
             ( { model
                 | chambre =
                     Chambre.setChambreTiles
                         floorTile
                         stoneWallTile
                         doorTile
+                        windowTile
                         model.chambre
                 , pyramid = Pyramid.setPyramidTile pyramidTile model.pyramid
               }
