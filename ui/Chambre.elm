@@ -15,12 +15,12 @@ type alias Chambre =
     , scale : Vec3
     , floor : Drawable T.Vertex
     , floorTile : Maybe Texture
-    , farWall : Drawable T.Vertex
-    , stoneWallTile : Maybe Texture
+    , floor1Walls : Drawable T.Vertex
+    , floor1WallTile : Maybe Texture
     , farWallDoor : Drawable T.Vertex
     , farWallDoorTile : Maybe Texture
-    , farWallWindows : Drawable T.Vertex
-    , farWallWindowTile : Maybe Texture
+    , floor1Windows : Drawable T.Vertex
+    , floor1WindowTile : Maybe Texture
     }
 
 
@@ -30,22 +30,22 @@ make coord scale =
     , scale = scale
     , floor = makeFloor
     , floorTile = Nothing
-    , farWall = makeFarWall
-    , stoneWallTile = Nothing
+    , floor1Walls = makeFloor1Walls
+    , floor1WallTile = Nothing
     , farWallDoor = makeFarWallDoor
     , farWallDoorTile = Nothing
-    , farWallWindows = makeFarWallWindows
-    , farWallWindowTile = Nothing
+    , floor1Windows = makeFloor1Windows
+    , floor1WindowTile = Nothing
     }
 
 
 setChambreTiles : Texture -> Texture -> Texture -> Texture -> Chambre -> Chambre
-setChambreTiles floorTile stoneWallTile farWallDoorTile windowTile chambre =
+setChambreTiles floorTile floor1WallTile farWallDoorTile floor1WindowTile chambre =
     { chambre
         | floorTile = Just floorTile
-        , stoneWallTile = Just stoneWallTile
+        , floor1WallTile = Just floor1WallTile
         , farWallDoorTile = Just farWallDoorTile
-        , farWallWindowTile = Just windowTile
+        , floor1WindowTile = Just floor1WindowTile
     }
 
 
@@ -58,11 +58,11 @@ view perspective chambre =
         case
             Maybe.map4 (,,,)
                 chambre.floorTile
-                chambre.stoneWallTile
+                chambre.floor1WallTile
                 chambre.farWallDoorTile
-                chambre.farWallWindowTile
+                chambre.floor1WindowTile
         of
-            Just ( floorTile, stoneWallTile, farWallDoorTile, windowTile ) ->
+            Just ( floorTile, floor1WallTile, farWallDoorTile, windowTile ) ->
                 [ WebGL.render
                     T.vertexShader
                     T.fragmentShader
@@ -74,10 +74,10 @@ view perspective chambre =
                 , WebGL.render
                     T.vertexShader
                     T.fragmentShader
-                    chambre.farWall
+                    chambre.floor1Walls
                     { perspective = perspective
                     , modelView = modelView_
-                    , texture = stoneWallTile
+                    , texture = floor1WallTile
                     }
                 , WebGL.render
                     T.vertexShader
@@ -90,7 +90,7 @@ view perspective chambre =
                 , WebGL.render
                     T.vertexShader
                     T.fragmentShader
-                    chambre.farWallWindows
+                    chambre.floor1Windows
                     { perspective = perspective
                     , modelView = modelView_
                     , texture = windowTile
@@ -164,17 +164,25 @@ makeFloor =
             ]
 
 
-makeFarWall : Drawable T.Vertex
-makeFarWall =
+makeFloor1Walls : Drawable T.Vertex
+makeFloor1Walls =
     Triangle <|
         concatMap T.makeFace
-            [ -- Bottom row - give room for a door.
+            [ --Far wall. Make room for two windows and one door
               ( vec3 -7 2 -7, vec3 -5 2 -7, vec3 -7 0 -7, vec3 -5 0 -7 )
-              --, ( vec3 -5 2 -7, vec3 -3 2 -7, vec3 -5 0 -7, vec3 -3 0 -7 )
             , ( vec3 -3 2 -7, vec3 -1 2 -7, vec3 -3 0 -7, vec3 -1 0 -7 )
             , ( vec3 1 2 -7, vec3 3 2 -7, vec3 1 0 -7, vec3 3 0 -7 )
-              --, ( vec3 3 2 -7, vec3 5 2 -7, vec3 3 0 -7, vec3 5 0 -7 )
             , ( vec3 5 2 -7, vec3 7 2 -7, vec3 5 0 -7, vec3 7 0 -7 )
+              -- Right wall - three windows.
+            , ( vec3 7 2 -7, vec3 7 2 -5, vec3 7 0 -7, vec3 7 0 -5 )
+            , ( vec3 7 2 -3, vec3 7 2 -1, vec3 7 0 -3, vec3 7 0 -1 )
+            , ( vec3 7 2 1, vec3 7 2 3, vec3 7 0 1, vec3 7 0 3 )
+            , ( vec3 7 2 5, vec3 7 2 7, vec3 7 0 5, vec3 7 0 7 )
+              -- Left wall - three windows.
+            , ( vec3 -7 2 -5, vec3 -7 2 -7, vec3 -7 0 -5, vec3 -7 0 -7 )
+            , ( vec3 -7 2 -1, vec3 -7 2 -3, vec3 -7 0 -1, vec3 -7 0 -3 )
+            , ( vec3 -7 2 3, vec3 -7 2 1, vec3 -7 0 3, vec3 -7 0 1 )
+            , ( vec3 -7 2 7, vec3 -7 2 5, vec3 -7 0 7, vec3 -7 0 5 )
             ]
 
 
@@ -186,12 +194,21 @@ makeFarWallDoor =
             ]
 
 
-makeFarWallWindows : Drawable T.Vertex
-makeFarWallWindows =
+makeFloor1Windows : Drawable T.Vertex
+makeFloor1Windows =
     Triangle <|
         concatMap T.makeFace
-            [ ( vec3 -5 2 -7, vec3 -3 2 -7, vec3 -5 0 -7, vec3 -3 0 -7 )
+            [ -- Far wall - two windows
+              ( vec3 -5 2 -7, vec3 -3 2 -7, vec3 -5 0 -7, vec3 -3 0 -7 )
             , ( vec3 3 2 -7, vec3 5 2 -7, vec3 3 0 -7, vec3 5 0 -7 )
+              -- Right wall - three windows
+            , ( vec3 7 2 -5, vec3 7 2 -3, vec3 7 0 -5, vec3 7 0 -3 )
+            , ( vec3 7 2 -1, vec3 7 2 1, vec3 7 0 -1, vec3 7 0 1 )
+            , ( vec3 7 2 3, vec3 7 2 5, vec3 7 0 3, vec3 7 0 5 )
+              -- Right wall - three windows
+            , ( vec3 -7 2 -3, vec3 -7 2 -5, vec3 -7 0 -3, vec3 -7 0 -5 )
+            , ( vec3 -7 2 1, vec3 -7 2 -1, vec3 -7 0 1, vec3 -7 0 -1 )
+            , ( vec3 -7 2 5, vec3 -7 2 3, vec3 -7 0 5, vec3 -7 0 3 )
             ]
 
 
